@@ -4,3 +4,9 @@
 [submodule "GLFW"]
 	path = GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "sdl-vulkan-tutorial"]
+	path = sdl-vulkan-tutorial
+	url = https://github.com/AndreVallestero/sdl-vulkan-tutorial.git
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/libsdl-org/SDL.git
