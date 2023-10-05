@@ -7,7 +7,7 @@ enable_testing()
 add_executable(Test_Render_Engine
 "./src/client.cpp"
 )
-
+set(ImGUIDIR "./imgui")
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
@@ -15,6 +15,8 @@ target_include_directories(Test_Render_Engine
     PRIVATE
     "./include"
     "./GLFW/include/GLFW"
+    ${ImGUIDIR}/backends()
+    ${ImGUIDIR}/()
 )
 find_package(Vulkan REQUIRED FATAL_ERROR)
 include_directories(${Vulkan_INCLUDE_DIRS})
