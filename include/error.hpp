@@ -3,13 +3,9 @@
 #include <mutex>
 #include <system_error>
 #include <string>
-
-#ifndef ERROR
-#define ERROR
-template <class T>
-class ERROR_MSG{
-    std::string ERROR_STR;
-    int flags;
-};
-
-#endif
+#ifndef MEMORY_OUT_OF_USAGE
+#define MEMORY_OUT_OF_USAGE 1
+#endif // !MEMORY_OUT_OF_USAGE
+#ifndef NULL_VALUE_RETURNED
+#define NULL_VALUE_RETURNED 2
+#endif // !NULL_VALUE_RETURNED
