@@ -36,14 +36,10 @@ include_directories(
     ./include/algorithm()
     )
 
-
-
-
-
 # target_link_libraries(Test_Render_Engine PUBLIC ${Vulkan_LIBRARIES})
 add_executable(${PROJECT_NAME} 
-    # ./src/test.cpp
-    ./src/QS.cpp
+    ./src/test.cpp
+    # ./src/QS.cpp
     ./src/algorithms/numericaL.cpp
     ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
     ${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp
@@ -54,3 +50,9 @@ add_executable(${PROJECT_NAME}
     ${IMGUI_DIR}/imgui_widgets.cpp)
     target_link_libraries(${PROJECT_NAME} PUBLIC ${LIBRARIES})
 target_compile_definitions(${PROJECT_NAME} PUBLIC -DImTextureID=ImU64)
+
+# add_test(
+#     NAME vulkan_init_test
+#     COMMAND 
+
+# )
