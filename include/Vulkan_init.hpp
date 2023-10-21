@@ -63,11 +63,17 @@ class InitVulkanApp : InitGLFWApp {
 public:
   InitVulkanApp() = default;
   ~InitVulkanApp() {}
+
+  /**
+   * @brief Runs the Vulkan application.
+   */
   void run() {
     initWindow();
     initVulkan();
     mainLoop();
+    cleanupVulkan();
     cleanup();
+    // cleanupWindow();
   }
 
 private:
