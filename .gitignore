@@ -1,4 +1,8 @@
 build/
 .vscode/
 .vs/
-.cache/
+.cache
+
+
+#shader files
+/shaders/*.spv

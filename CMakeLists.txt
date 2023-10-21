@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(Test_Render_Engine VERSION 0.1.0 LANGUAGES C CXX)
-
+set(CMAKE_CXX_STANDARD 17)
 include(CTest)
 enable_testing()
 
@@ -38,9 +38,12 @@ include_directories(
 
 # target_link_libraries(Test_Render_Engine PUBLIC ${Vulkan_LIBRARIES})
 add_executable(${PROJECT_NAME} 
-    ./src/test.cpp
+    # ./src/test.cpp
     # ./src/QS.cpp
-    ./src/algorithms/numericaL.cpp
+    # ./src/algorithms/numericaL.cpp
+    ./src/client.cpp
+    ./src/glfw_init.cpp
+    ./src/vulkan_init.cpp
     ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
     ${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp
     ${IMGUI_DIR}/imgui.cpp

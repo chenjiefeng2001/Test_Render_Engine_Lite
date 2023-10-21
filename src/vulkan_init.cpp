@@ -1,4 +1,5 @@
 #include "vulkan_init.hpp"
+#include "Test_Render_Engine_Lite/Imgui/backends/imgui_impl_vulkan.h"
 #include "glfwinit.hpp"
 int InitVulkanApp::MinImageCout = 2;
 VkResult CreateDebugUtilsMessengerEXT(
@@ -144,7 +145,7 @@ void InitVulkanApp::createInstance() {
 
   VkApplicationInfo appInfo{};
   appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-  appInfo.pApplicationName = "Hello Triangle";
+  appInfo.pApplicationName = "Test Render Engine Lite";
   appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
   appInfo.pEngineName = "No Engine";
   appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
@@ -1187,6 +1188,7 @@ void InitVulkanApp::InitImgui() {
   init_info.MSAASamples = VK_SAMPLE_COUNT_1_BIT;
 
   ImGui_ImplVulkan_Init(&init_info, renderPass);
-  immediate_submit(
-      [&](VkCommandBuffer cmd) { ImGui_ImplVulkan_CreateFontsTexture(cmd); });
+  //   immediate_submit(
+  //       [&](VkCommandBuffer cmd) { ImGui_ImplVulkan_CreateFontsTexture(cmd);
+  //       });
 }

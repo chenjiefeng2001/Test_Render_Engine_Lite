@@ -15,7 +15,7 @@ public:
   void cleanup();
   InitGLFWApp() = default;
   ~InitGLFWApp() {}
-
+  static void glfw_error_callback(int error, const char* description);
 protected:
   GLFWwindow *window;
 

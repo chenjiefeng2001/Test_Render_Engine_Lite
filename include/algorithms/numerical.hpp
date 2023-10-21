@@ -50,4 +50,5 @@ int SWAP_ITEM(std::vector<T> &container, int left, int right) {
   std::swap(container[left], container[right]);
   return 0;
 }
+
 #endif /* NUMERICAL */
